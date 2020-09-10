@@ -1,0 +1,129 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  width: 80%;
+  height: 95%;
+  margin: 40px auto;
+  background-image: linear-gradient($base-color, $light);
+  flex-direction: column;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.75);
+  transition: all ease 1s;
+  animation: fadein 0.5s;
+}
+
+.modal__iframe {
+  padding-top: 2rem;
+  width: 70%;
+  height: 100%;
+  max-height: 400px;
+}
+
+.modal__error {
+  margin-top: 4rem;
+  font-weight: bold;
+  color: $light;
+}
+
+.modal__no-reviews {
+  margin-bottom: 4rem;
+  font-size: 18px;
+  color: $dark;
+}
+
+.review {
+  padding: 1.1rem;
+  max-height: 200px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal__reviews {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 450px;
+  justify-content: center;
+}
+
+.review__content {
+  margin: 1.2rem;
+  padding: 1rem;
+  height: 100%;
+  color: $dark;
+  font-weight: lighter;
+  -webkit-box-shadow: 10px -9px 5px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px -9px 5px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px -9px 5px -6px rgba(0, 0, 0, 0.75);
+}
+
+.review__author {
+  margin: 0px 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.review__upper {
+  display: flex;
+  align-items: center;
+}
+
+.review__url {
+  transition: all 0.5s;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: $dark-grey;
+  &:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    color: $variant-color;
+  }
+}
+
+.btn {
+  margin-top: 1rem;
+  background: $accent-color;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 40px 40px $blue inset;
+  }
+}
+
+.modal__similar {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .review__content {
+    font-size: 12px;
+  }
+}

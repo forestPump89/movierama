@@ -1,0 +1,17 @@
+$base-color: #403f6f;
+$accent-color: #c8d5ff;
+$variant-color: #6f5c3f;
+$contrast-color: #6f403f;
+$blue: darkcyan;
+$dark: #000000;
+$light: #ffffff;
+$grey: #d4d7de;
+$dark-grey: #2c2f32;
+$green: #79a70a;
+
+@import-normalize;
+@import './App.scss';
+@import './Navbar.scss';
+@import './Spinner.scss';
+@import './Movie.scss';
+@import './Modal.scss';
