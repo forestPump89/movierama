@@ -30,8 +30,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         error: action.error,
-        loading: false,
-        loaded: true
+        loading: false
       };
     case actionTypes.SEARCH_MOVIES_FETCH_SUCCESS:
       const searchResults = action.movieName

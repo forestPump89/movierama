@@ -4,6 +4,15 @@ export {
   getMovieVideo,
   getSimilarMovies,
   getMovieReviews,
-  setSelectedMovieId
+  setSelectedMovieId,
+  getMoviesFetchFail,
+  getMoviesFetchStart,
+  getMoviesFetchSuccess,
+  searchMoviesFetchSuccess
 } from './moviesAction';
-export { getGenres } from './genresAction';
+export {
+  getGenres,
+  getGenresFetchFail,
+  getGenresFetchStart,
+  getGenresFetchSuccess
+} from './genresAction';

@@ -32,7 +32,7 @@ export const getGenres = () => {
           headers: headers()
         }
       );
-      dispatch(getGenresFetchSuccess(result.data));
+      dispatch(getGenresFetchSuccess(result.data.genres));
       return result.data;
     } catch (error) {
       dispatch(getGenresFetchFail(error.response));

@@ -3,7 +3,8 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
   genres: [],
   loading: false,
-  error: null
+  error: null,
+  loaded: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -17,7 +18,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        genres: action.genres.genres
+        genres: action.genres,
+        loaded: true
       };
 
     case actionTypes.GET_GENRES_FETCH_FAIL:

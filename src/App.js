@@ -10,6 +10,7 @@ import Movies from './components/Movies';
 const App = () => {
   const [page, setPage] = useState(1);
   const moviesLoaded = useSelector((state) => state.movies.loaded);
+  const genresLoaded = useSelector((state) => state.genres.loaded);
   const searchResults = useSelector((state) => state.movies.searchResults);
   const searchTerm = useSelector((state) => state.movies.searchTerm);
   const movies = useSelector((state) => state.movies.movies);
@@ -43,7 +44,7 @@ const App = () => {
     );
   }
 
-  if (!movies.length > 0 || !moviesLoaded) {
+  if (!movies.length > 0 || !moviesLoaded || !genresLoaded) {
     return <Spinner />;
   }
 
