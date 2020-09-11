@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MovieItem from './MovieItem';
 import Modal from 'components/Modal';
 
@@ -12,6 +12,14 @@ const Movies = ({ movies }) => {
   const handleClose = () => {
     setModalOpen(false);
   };
+
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.classList.add('scroll-hidden');
+    } else {
+      document.body.classList.remove('scroll-hidden');
+    }
+  }, [modalOpen]);
 
   return (
     <div className="container movie-list" onClick={handleClose}>
